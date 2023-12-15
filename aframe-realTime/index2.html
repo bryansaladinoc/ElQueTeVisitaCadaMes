@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.deepstream.io/js/client/latest/ds.min.js"></script>
+</head>
+<body>
+
+    <input type="text"/>
+
+    <script type="text/javascript">
+        window.onload = function () {
+          //js goes here
+            const { DeepstreamClient } = window.DeepstreamClient;
+            const client = new DeepstreamClient('192.168.71.108:4201');
+            client.login()
+
+            const record = client.record.getRecord('some-name');
+
+            const input = document.querySelector('input');
+
+            input.onkeyup = (function() {
+                record.set('firstname', input.value);
+            });
+
+            record.subscribe('firstname', function(value) {
+                input.value = value
+            });
+        }
+    </script>
+</body>
+</html>

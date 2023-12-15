@@ -1,0 +1,25 @@
+{
+  "clientes": [
+    {
+      "nombre": "zadic2",
+      "telefono": "735000000",
+      "correo": "a@a.com",
+      "empresa": "Testing",
+      "id": 2
+    },
+    {
+      "nombre": "Test Update",
+      "telefono": "22445254245",
+      "correo": "a@a.com",
+      "empresa": "asdasd",
+      "id": 3
+    },
+    {
+      "nombre": "Nuevo cliente",
+      "telefono": "58765645654",
+      "correo": "nc@a.com",
+      "empresa": "trycatchn",
+      "id": 4
+    }
+  ]
+}
